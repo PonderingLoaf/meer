@@ -45,7 +45,6 @@ europe_countries = [
     "San Marino",
     "Vatican City"
 ]
-
 asia_countries = [
     "China",
     "India",
@@ -94,7 +93,6 @@ asia_countries = [
     "Bhutan",
     "Maldives"
 ]
-
 africa_countries = [
     "Nigeria",
     "Ethiopia",
@@ -151,7 +149,6 @@ africa_countries = [
     "Sao Tome and Principe",
     "Seychelles"
 ]
-
 north_america_countries = [
     "United States",
     "Mexico",
@@ -176,7 +173,6 @@ north_america_countries = [
     "Antigua and Barbuda",
     "Saint Kitts and Nevis"
 ]
-
 south_america_countries = [
     "Brazil",
     "Colombia",
@@ -191,7 +187,6 @@ south_america_countries = [
     "Guyana",
     "Suriname"
 ]
-
 oceania_countries = [
     "Australia",
     "Papua New Guinea",
@@ -208,7 +203,6 @@ oceania_countries = [
     "Tuvalu",
     "Nauru"
 ]
-
 middle_east_countries = [
     "Egypt",
     "Iran",
@@ -228,36 +222,124 @@ middle_east_countries = [
     "Palestine"
 ]
 
-region = input('Input a region: ').strip()
+def home():
+    print(' ')
+    region = input('Input a region: ').strip().lower().split()
 
-if region.lower() == 'middle east':
-    for country in middle_east_countries:
-        print(country)
-elif region.lower() in ['oceania', 'australasia', 'australia', 'pacific islands']:
-    for country in oceania_countries:
-        print(country)
-elif region.lower() == 'north america':
-    for country in north_america_countries:
-        print(country)
-elif region.lower() == 'south america':
-    for country in south_america_countries:
-        print(country)
-elif region.lower() in ['america', 'americas']:
-    for country in north_america_countries:
-        print(country)
-    for country in south_america_countries:
-        print(country)
-elif region.lower() == 'asia':
-    for country in asia_countries:
-        print(country)
-elif region.lower() == 'eurasia':
-    for country in europe_countries:
-        print(country)
-    for country in asia_countries:
-        print(country)
-elif region.lower() == 'europe':
-    for country in europe_countries:
-        print(country)
-elif region.lower() == 'africa':
-    for country in africa_countries:
-        print(country)
+    # MIDDLE EAST
+    if 'middle east' in region:
+        count = 0
+        for country in middle_east_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in', region, ' They are:')
+        print(' ')
+        for country in middle_east_countries:
+            print(country)
+        home()
+
+    # OCEANIA
+    elif ['oceania', 'australasia', 'australia', 'pacific islands'] in region:
+        count = 0
+        for country in oceania_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in', region, ' They are:')
+        print(' ')
+        for country in oceania_countries:
+            print(country)
+        home()
+
+    # NORTH AMERICA
+    elif 'north america' in region:
+        count = 0
+        for country in north_america_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in', region, ' They are:')
+        print(' ')
+        for country in north_america_countries:
+            print(country)
+        home()
+
+    # SOUTH AMERICA
+    elif 'south america' in region:
+        count = 0
+        for country in south_america_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in', region, ' They are:')
+        print(' ')
+        for country in south_america_countries:
+            print(country)
+        home()
+
+    # AMERICAS
+    elif ['america', 'americas'] in region:
+        count = 0
+        for country in north_america_countries:
+            count += 1
+        for country in south_america_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in (the)', region, ' They are:')
+        print(' ')
+        for country in north_america_countries:
+            print(country)
+        for country in south_america_countries:
+            print(country)
+        home()
+
+    # ASIA
+    elif 'asia' in region:
+        count = 0
+        for country in asia_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in', region, ' They are:')
+        print(' ')
+        for country in asia_countries:
+            print(country)
+        home()
+
+    # EURASIA
+    elif 'aurasia' in region:
+        count = 0
+        for country in europe_countries:
+            count += 1
+        for country in asia_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in', region, ' They are:')
+        print(' ')
+        for country in europe_countries:
+            print(country)
+        for country in asia_countries:
+            print(country)
+        home()
+
+    # EUROPE 
+    elif 'europe' in region:
+        count = 0
+        for country in europe_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in', region, ' They are:')
+        print(' ')
+        for country in europe_countries:
+            print(country)
+        home()
+
+    # AFRICA        
+    elif 'africa' in region:
+        count = 0
+        for country in africa_countries:
+            count += 1
+        print(' ')
+        print('there are', count, 'countries in', region, ' They are:')
+        print(' ')
+        for country in africa_countries:
+            print(country)
+        home()
+
+home()
