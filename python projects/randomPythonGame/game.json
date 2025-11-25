@@ -1,0 +1,7 @@
+{
+    "difficulty": 1,
+    "maxUnitCount": 100,
+    "maxBuildingCount": 50,
+    "factions": ["Empire", "Kingdom", "Cult"],
+    "map": 1
+}
