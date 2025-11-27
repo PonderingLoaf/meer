@@ -3,5 +3,64 @@
     "maxUnitCount": 100,
     "maxBuildingCount": 50,
     "factions": ["Empire", "Kingdom", "Cult"],
-    "map": 1
+    "map": 1,
+
+    "cities": {
+        "London" : {
+            "name" : "London",
+            "population" : 1000,
+            "productionQueue" : [],
+            "isCapital" : true,
+            "buildings" : {
+                "factory" : 0,
+                "barracks" : 0,
+                "airfield" : 0,
+                "dockyard" : 0,
+                "researchLab" : 0,
+                "fortefication" : 0
+            }
+        },
+        "New York" : {
+            "name" : "New York",
+            "population" : 800,
+            "productionQueue" : [],
+            "isCapital" : false,
+            "buildings" : {
+                "factory" : 0,
+                "barracks" : 0,
+                "airfield" : 0,
+                "dockyard" : 0,
+                "researchLab" : 0,
+                "fortefication" : 0
+            }
+        },
+        "Tokyo" : {
+            "name" : "Tokyo",
+            "population" : 1200,
+            "productionQueue" : [],
+            "isCapital" : false,
+            "buildings" : {
+                "factory" : 0,
+                "barracks" : 0,
+                "airfield" : 0,
+                "dockyard" : 0,
+                "researchLab" : 0,
+                "fortefication" : 0
+            }
+        },
+        "Moscow" : {
+            "name" : "Moscow",
+            "population" : 900,
+            "productionQueue" : [],
+            "isCapital" : false,
+            "buildings" : {
+                "factory" : 0,
+                "barracks" : 0,
+                "airfield" : 0,
+                "dockyard" : 0,
+                "researchLab" : 0,
+                "fortefication" : 0
+            }
+        }
+    }
 }

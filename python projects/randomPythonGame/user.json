@@ -1,4 +1,19 @@
 {
     "credits" : 100,
-    "manpower" : 100
+    "manpower" : 100,
+    "techLevel" : 1,
+    "units" : {
+        "infantry" : 0,
+        "tank" : 0,
+        "artillery" : 0,
+        "aircraft" : 0,
+        "naval": 0
+    },
+    "resources" : {
+        "steel" : 0,
+        "fuel" : 0,
+        "rations" : 0
+    },
+    "ownedCities" : ["London", "New York"],
+    "faction" : "Empire"
 }

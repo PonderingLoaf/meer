@@ -25,3 +25,7 @@ tankButton = gui.Button(260, 600, 60, 60, "T", gui.SemiDarkBG, gui.LightBG)
 artilleryButton = gui.Button(320, 600, 60, 60, "A", gui.SemiDarkBG, gui.LightBG)
 aircraftButton = gui.Button(380, 600, 60, 60, "Ac", gui.SemiDarkBG, gui.LightBG)
 navalButton = gui.Button(440, 600, 60, 60, "N", gui.SemiDarkBG, gui.LightBG)
+
+
+# Tech Tree Surface
+techTreeSurface = gui.Banner(100, 100, 600, 470, gui.LightBG)

@@ -29,12 +29,18 @@ def drawGui(screen):
     assets.aircraftButton.draw(screen)
     assets.navalButton.draw(screen)
 
+class render():
+    def renderTechTree(self, screen):
+        assets.techTreeSurface.draw(screen)
+
 class main():
     usrData = assets.usrData
     ## Window Vars
 
-    WIDTH, HEIGHT = 1280, 720
-    screen = pygame.display.set_mode((WIDTH, HEIGHT))
+    with open("settings.json", "r") as data:
+        settings = json.load(data) 
+
+    screen = pygame.display.set_mode((settings["width"], settings["height"]))
     pygame.display.set_caption("Commandus - Dev Testing")
 
     # add the clock
@@ -44,7 +50,7 @@ class main():
     keys = pygame.key.get_pressed()
 
     background_image = pygame.image.load("your_image.jpg").convert()
-    background_image = pygame.transform.scale(background_image, (WIDTH,HEIGHT))
+    background_image = pygame.transform.scale(background_image, (settings["width"], settings["height"]))
 
     # Running loop - updates the screen @ 60fps
     running = True
@@ -55,7 +61,7 @@ class main():
             if assets.countryButton.is_clicked(event):
                 print("Country button clicked!")
             if assets.techButton.is_clicked(event):
-                print("Tech button clicked!")
+                render.renderTechTree(screen)
             if assets.diplomaticButton.is_clicked(event):
                 print("Diplomacy button clicked!")
 
@@ -70,6 +76,7 @@ class main():
                 units.unitHandler().creationUnit('aircraft')
             if assets.navalButton.is_clicked(event):
                 units.unitHandler().creationUnit('naval') 
+
         # Fill screen
         screen.fill((30, 30, 30))
         screen.blit(background_image, (0, 0))

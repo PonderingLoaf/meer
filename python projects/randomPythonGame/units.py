@@ -1,4 +1,5 @@
 import pygame, sys, json, math, time, gui, assetParser as assets, timer
+
 pygame.init()
 
 with open("units.json", "r") as data:
@@ -10,7 +11,7 @@ class unitHandler():
         'tank': 0,
         'artillery': 0,
         'aircraft': 0,
-        'naval': 0
+        'naval': 0,
     }
     
     def createUnit(self, unitType):
@@ -25,3 +26,14 @@ class unitHandler():
             print(f"{unitType.capitalize()} created! Total {unitType.capitalize()}: {self.units[unitType]}")
         else:
             print(f"Not enough manpower or credits to create {unitType} or invalid unit type.")
+
+    def getUnitCount(self, unitType):
+        return self.units.get(unitType, 0)
+    
+    def unitContinuity(self):
+        if unit in self.units >= 1:
+            for unit in self.units:
+                return True
+        else:
+            return False
+            
