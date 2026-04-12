@@ -1,5 +1,5 @@
 dict = {
-    'a': 'alpha',
+    'a': 'alfa',
     'b': 'bravo',
     'c': 'charlie',
     'd': 'delta',
@@ -39,7 +39,7 @@ dict = {
 }
 
 idict = {
-    'alpha': 'a',
+    'alfa': 'a',
     'bravo': 'b',
     'charlie': 'c',
     'delta': 'd',
@@ -88,10 +88,10 @@ def eton():
         if letter == ' ':
             print(dict.get(' ')) # prints an empty line if a space is detected
         else:
-            print(letter, 'as in', dict.get(letter)) # prints the letters with their nato phonetic alphabet versions
+            print(letter, 'as in', dict.get(letter)) # prints the letters with their nato phonetic alfabet versions
 
     print(' ')
-    print('"'+ name + '"', 'has been converted to NATO phonetic alphabet.')
+    print('"'+ name + '"', 'has been converted to NATO phonetic alfabet.')
 
     print(' ')
     input("Press Enter to close...")
@@ -113,7 +113,7 @@ def ntoe():
 
 # Start page
 
-print('NATO phonetic alphabet converter')
+print('NATO phonetic alfabet converter')
 
 program = (input('Convert to NATO(1) or English(2) '))
 if program == 1 or 'NATO':

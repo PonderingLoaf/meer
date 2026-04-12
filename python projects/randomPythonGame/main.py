@@ -35,6 +35,7 @@ class render():
 
 class main():
     usrData = assets.usrData
+    render = render()
     ## Window Vars
 
     with open("settings.json", "r") as data:
@@ -69,7 +70,7 @@ class main():
             if assets.infantryButton.is_clicked(event):
                 units.unitHandler().creationUnit('infantry')
             if assets.tankButton.is_clicked(event):
-                units.unitHandler().creationUnit('tank')
+                units.unitHandler().creationUnit('tank') # <-- Gets angry here i don't fucking know why
             if assets.artilleryButton.is_clicked(event):
                 units.unitHandler().creationUnit('artillery')
             if assets.aircraftButton.is_clicked(event):

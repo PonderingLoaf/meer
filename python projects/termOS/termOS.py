@@ -165,7 +165,7 @@ def restart():
     sys.exit()
 
 def clear_terminal():
-    os.system('cls')
+    os.system('clear')
 
 def Main():
     clear_terminal()

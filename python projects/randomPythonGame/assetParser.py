@@ -4,6 +4,7 @@ with open("user.json", "r") as data:
     usrData = json.load(data) 
 
 credits = usrData['credits']
+oil = usrData['resources']['oil']
 manpower = usrData['manpower']
 
 # Buttons

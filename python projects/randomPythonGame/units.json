@@ -9,7 +9,8 @@
         "manpowerCost": 30,
         "creditCost": 5,
         "buildTime": 10,
-        "techLevel": 1
+        "techLevel": 1,
+        "oil": 10
     },
     "artillery":{
         "manpowerCost": 20,
@@ -21,12 +22,14 @@
         "manpowerCost": 50,
         "creditCost": 10, 
         "buildTime": 15,
-        "techLevel": 1
+        "techLevel": 1,
+        "oil": 15
     },
     "naval":{
         "manpowerCost": 40,
         "creditCost": 8,
         "buildTime": 12,
-        "techLevel": 1
+        "techLevel": 1,
+        "oil": 20
     }
 }
